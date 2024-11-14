@@ -1,0 +1,2012 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: white;
+    border-bottom: 1px solid #8F8989;
+    height: 76px;
+  }
+  
+  .logo h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 160px;
+  }
+  
+  .search-container {
+    position: relative;
+    width: 40%;
+  }
+  
+  .search-input {
+    width: 100%;
+    padding: 8px 35px 8px 12px; 
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    height: 48px;
+  }
+  
+  .search-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaa;
+  }
+  
+  .location-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .location-container p {
+    margin: 0 5px;
+  }
+  
+  .dropdown-icon {
+    margin-left: 5px;
+  }
+  
+  .dropdown {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    width: 150px;
+    z-index: 10;
+  }
+  
+  .dropdown-item {
+    padding: 8px 12px;
+    cursor: pointer;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .header-actions div {
+    text-align: center;
+  }
+  
+  .header-actions i {
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .header-actions p {
+    font-size: 12px;
+    color: #555;
+  }
+  
+  .login button {
+    padding: 6px 12px;
+    background-color: white;
+    color: #149A62;
+    border: 2px solid #149A62;
+    border-radius: 4px;
+    cursor: pointer;
+    height: 48px;
+    width: 129px;
+  }
+  
+  .cart {
+    margin-right: 160px;
+  }
+  
+  /* Responsive Design */
+  
+  @media (max-width: 1024px) {
+    .logo h1 {
+      margin-left: 80px;
+    }
+    .cart {
+      margin-right: 80px;
+    }
+    .header-actions {
+      gap: 10px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .header {
+      flex-direction: row;
+      padding: 15px 20px;
+    }
+    
+    .logo h1 {
+      font-size: 20px;
+      margin-left: 0;
+    }
+  
+    .search-container {
+      width: 100%;
+      margin-top: 10px;
+    }
+  
+    .login button {
+      width: 100px;
+      height: 40px;
+    }
+  
+    .header-actions {
+      gap: 10px;
+    }
+  }
+  
+  /* General CSS remains unchanged */
+  
+  @media (max-width: 572px) {
+    
+  
+    /* Header adjustment for mobile layout */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      flex-wrap: wrap;
+    }
+  
+    /* Logo on the left */
+    .logo {
+      order: 1;
+      margin: 0;
+    }
+  
+    /* Login, Wishlist, and Cart aligned to the right of the logo */
+    .header-actions {
+      display: flex;
+      gap: 5px;
+      align-items: center;
+      order: 2;
+      margin: 0;
+    }
+    .header-actions i {
+      font-size: 16px; /* Adjust font size for icons */
+    }
+    /* Move search-container below header */
+    .search-container {
+      width: 100%;
+      margin-top: 10px;
+      order: 3;
+      display: flex;
+      justify-content: center;
+    }
+  
+    /* Place location-container below search-container */
+    .location-container {
+      width: 100%;
+      margin-top: 10px;
+      order: 4;
+      display: flex;
+      justify-content: center;
+  
+    }
+  
+    /* Additional styling adjustments */
+    .search-input {
+      height: 40px;
+      padding: 8px 30px 8px 10px;
+    }
+  
+    .login button {
+      width: 90px;
+      height: 36px;
+    }
+  
+    .cart {
+      margin-right: 0;
+    }
+  }
+  /*banner*/
+  
+  .banner {
+    margin-top: 50px;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    font-family: Gentium Plus, -apple-system, Roboto, Helvetica, sans-serif;
+    font-weight: 400;
+    padding: 0 26px;
+    margin-left: 160px;
+    margin-right: 160px;
+  }
+  
+  
+  .bannerContent {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-height: 430px;
+    width: 100%;
+    align-items: start;
+    padding: 37px 53px 92px;
+    border-radius: 20px; 
+    overflow: hidden; 
+  }
+  
+  .backgroundImage {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 20px; 
+  }
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.8); 
+    border-radius: 50%; 
+    cursor: pointer;
+  }
+  
+  .arrow-left {
+    left: 20px;
+    background-color: white;
+    border-radius: 1px solid #8F8989;
+  }
+  
+  .arrow-right {
+    right: 20px;
+    background-color: white;
+    border-radius: 1px solid #8F8989;
+  }
+  
+  .arrow svg {
+    font-size: 12px;
+    color: #333; 
+  }
+  
+  
+  .saleTitle {
+    position: relative;
+    color: rgba(255, 122, 0, 1);
+    font-size: 32px;
+    text-align: center;
+  }
+  
+  .mainHeading {
+    position: relative;
+    color: rgba(210, 105, 30, 1);
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    margin: 60px 0 0 131px;
+  }
+  
+  
+  
+  .subHeading {
+    position: relative;
+    color: rgba(241, 203, 0, 1);
+    font-size: 36px;
+    text-align: center;
+    margin: 36px 0 0 98px;
+  }
+  
+  
+  .ctaButton {
+    position: relative;
+    align-self: stretch;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 1);
+    min-height: 48px;
+    color: rgba(20, 154, 98, 1);
+    margin: 49px 0 0 249px;
+    padding: 12px 40px;
+    font: 600 16px Poppins, sans-serif;
+    border: none;
+    cursor: pointer;
+    width: 200px;
+  }
+  
+  
+  .footerImage {
+    object-fit: contain;
+    object-position: center;
+    width: 35px;
+    align-self: center;
+    margin-top: 50px;
+  }
+  
+  
+  
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+  
+  /* General styles for desktop view */
+  /* General styles for desktop view */
+  @media (min-width: 1025px) {
+    .banner {
+      margin-top: 50px;
+      margin-left: 160px;
+      margin-right: 160px;
+      padding: 0 26px;
+    }
+  
+    .bannerContent {
+      padding: 37px 53px 92px;
+      min-height: 430px;
+    }
+  
+    .mainHeading {
+      font-size: 40px;
+      margin: 60px 0 0 131px;
+    }
+  
+    .subHeading {
+      font-size: 36px;
+      margin: 36px 0 0 98px;
+    }
+  
+    .ctaButton {
+      margin: 49px 0 0 249px;
+      width: 200px;
+    }
+  }
+  
+  /* Tablet view adjustments (768px to 1024px) */
+  @media (max-width: 1024px) and (min-width: 768px) {
+    .banner {
+      margin-left: 80px;
+      margin-right: 80px;
+      padding: 0 16px;
+    }
+  
+    .bannerContent {
+      padding: 30px 40px 70px;
+      min-height: 350px;
+    }
+  
+    .mainHeading {
+      font-size: 32px;
+      margin: 40px 0 0 60px;
+      text-align: left;
+    }
+  
+    .subHeading {
+      font-size: 28px;
+      margin: 24px 0 0 50px;
+      text-align: left;
+    }
+  
+    .ctaButton {
+      margin: 40px 0 0 60px;
+      width: 160px;
+      max-width: 160px; /* Prevent width increase */
+    }
+  
+    .backgroundImage {
+      /* Ensure image maintains its aspect ratio */
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+  
+  
+  /* Tablet and Mobile view adjustments (767px to 400px) */
+  @media (max-width: 769px) and (min-width: 350px) {
+    .banner {
+      margin-top: 70px;
+      margin-left: 10px;
+      margin-right: 10px;
+      padding: 0 10px;
+    }
+  
+    .bannerContent {
+      padding: 15px;
+      min-height: 300px;
+      align-items: center;
+      position: relative; /* Ensure content stays inside the container */
+      overflow: hidden; /* Prevent overflow of content */
+    }
+  
+    .backgroundImage {
+      max-width: 100%;
+      height: 200px;
+      object-fit: cover;
+      object-position: center;
+    }
+  
+    /* Arrows - center on the image */
+    .arrow {
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 50%;
+      cursor: pointer;
+    }
+  
+    .arrow-left {
+      left: 10px;
+      margin-top: -30px; /* Adjust the arrow's vertical position */
+    }
+  
+    .arrow-right {
+      right: 10px;
+      margin-top: -30px; /* Adjust the arrow's vertical position */
+    }
+  
+    .saleTitle {
+      font-size: 15px; /* Slightly smaller font for small screens */
+      text-align: center;
+      color: rgba(255, 122, 0, 1);
+      margin-top: 5px;
+    }
+  
+    .mainHeading {
+      font-size: 18px; /* Smaller font for small screens */
+      margin: 5px 0;
+      text-align: center;
+      font-weight: 700;
+      color: rgba(210, 105, 30, 1);
+      position: relative;
+    }
+  
+    .subHeading {
+      font-size: 16px; /* Smaller font for mobile screens */
+      margin: 5px 0 0;
+      text-align: center;
+      color: rgba(241, 203, 0, 1);
+    }
+  
+    /* CTA Button Adjustments */
+    .ctaButton {
+      width: 50%;
+      max-width: 150px; /* Prevent the button from stretching too much */
+      margin: 5px 0 0;
+      /* padding: 12px; */
+      white-space: nowrap;
+      align-self: center;
+      background-color: rgba(255, 255, 255, 1);
+      color: rgba(20, 154, 98, 1);
+      border: none;
+      font: 600 16px Poppins, sans-serif;
+      cursor: pointer;
+      min-height: 30px; /* Ensure the button height doesn't decrease */
+    }
+  }
+  
+  
+  
+  /* category */
+  
+  /* Default layout for web screens (above 769px) */
+  .categoryGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+    margin-left: 190px;
+    margin-top: 20px;
+    margin-right: 130px;
+    margin-bottom: 30px;
+  }
+  
+  .categoryItem {
+    display: flex;
+    flex-direction: column;
+    line-height: 25px;
+    flex-grow: 1;
+    width: 100px;
+  }
+  
+  .categoryImage {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 80px;
+  }
+  
+  .categoryTitle {
+    align-self: center;
+    margin-top: 18px;
+  }
+  
+  .multiLineTitle {
+    line-height: 18px;
+    font-size: 16px;
+  }
+  
+  .wrapTitle {
+    white-space: nowrap;
+  }
+  
+  /* Tablet and mobile screens (max-width: 769px) */
+  @media (max-width: 769px) {
+    .categoryGrid {
+      grid-template-columns: repeat(4, 1fr); /* Display 4 images per row */
+      gap: 5px;
+      margin-left: 30px;
+      margin-right: 10px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+  
+    .categoryImage {
+      width: 60px; /* Shrink images for tablet and mobile */
+    }
+  
+    .multiLineTitle {
+      font-size: 14px; /* Reduce font size for smaller screens */
+    }
+  }
+  
+  /* Small mobile screens (400px and below) */
+  @media (max-width: 400px) {
+    .categoryGrid {
+      grid-template-columns: repeat(3, 1fr); /* 3 images per row */
+      gap: 5px;
+    }
+  
+    .categoryImage {
+      width: 50px; /* Further reduce image size */
+    }
+  
+    .multiLineTitle {
+      font-size: 12px; /* Further reduce font size */
+    }
+  }
+  
+  
+  
+  /* top product */
+  
+  .container {
+    margin-top: 30px;
+    margin-left: 160px;
+    margin-right: 160px;
+    
+  }
+  
+  .headerWithArrows {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 10px;
+  }
+  
+  .title {
+    font-size: 24px;
+    margin: 0 20px; 
+    text-align: center;
+  }
+  
+  .chevronIcon {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    overflow: hidden;
+    padding: 4px;
+  }
+  
+  .chevronIcon svg {
+    color: black; 
+    font-size: 18px; 
+  }
+  
+  
+  .chevronLeft {
+    position: absolute;
+    left: -30px; 
+    color: #333;
+    margin-top: 380px;
+    
+  }
+  
+  .chevronRight {
+    position: absolute;
+    right: -6px; 
+    color: #333;
+    margin-top: 380px;
+  }
+  
+  .productImage{
+    height:260px;
+   
+  }
+  
+  .productGrid {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+  
+  
+  .productCard {
+    width: 210px;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative; 
+    padding: 10px 0px;
+    
+  }
+  
+  .productDetails {
+    padding: 10px 0px;
+  }
+  
+  .productNameRating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px; 
+  }
+  
+  .productName {
+    font-size: 16px;
+    white-space: nowrap;
+  }
+  
+  .star {
+    font-size: 14px;
+    color: #ff9000;
+    margin-right: 10px;
+  }
+  
+  .litre{
+    border: 2px solid #8F8989;
+    color: #8F8989;
+    padding: 2px 15px;
+    border-radius: 4px;
+    font-size: 10px;
+    white-space: nowrap;
+    
+  }
+  
+  .discountTag {
+    background-color: #ff9000;
+    color: white;
+    padding: 2px 5px;
+    border-radius: 4px;
+    font-size: 12px;
+    display: inline-block;
+    margin-left: 105px;
+    white-space: nowrap;
+  }
+  
+  .productPriceContainer {
+    margin-top: 5px; 
+    text-align: left;
+  }
+  
+  .productPrice {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+  }
+  
+  .originalPrice {
+    text-decoration: line-through;
+    color: #aaa;
+    font-size: 14px;
+    margin-left: 5px;
+  }
+  
+  
+  .wishlistIcon {
+    color: red;
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute; 
+    top: 10px; 
+    right: 15px; 
+    background-color: rgba(255, 255, 255, 0.7); 
+    padding: 4px; 
+    border-radius: 50%; 
+    margin-top: 10px;
+  }
+  
+  /* Tablet view - shrink product size and enable horizontal scroll */
+  @media (max-width: 1024px) {
+    .container {
+      margin-left: 40px;
+      margin-right: 40px;
+      /* overflow-x: auto;  */
+    }
+  
+    .productGrid {
+      display: flex; 
+      gap: 20px;
+    }
+  
+    .productCard {
+      width: 180px; /* Shrink product card width */
+      flex-shrink: 0;
+    }
+  
+    .productImage {
+      height: 200px; /* Shrink product image height */
+    }
+  
+  
+  /* Adjust the star and discount tag for tablet */
+  .productNameRating {
+    font-size: 14px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .productName {
+    font-size: 14px; /* Reduced font size for product name */
+  }
+  
+  .star {
+    font-size: 12px;
+  }
+  
+  .discountTag {
+    font-size: 12px; /* Shrink discount text */
+    padding: 2px 4px;
+    margin-left: 5px; /* Adjust spacing between discount and product name */
+  }
+  }
+  
+  
+  
+  /* Mobile view - further shrink product size and enable horizontal scroll */
+  @media (max-width: 768px) {
+    .container {
+      margin-left: 30px;
+      margin-right: 10px;
+      /* overflow-x: auto;  */
+    }
+  
+    .productGrid {
+      display: flex;
+      gap: 15px;
+    }
+  
+    .productCard {
+      width: 150px; /* Further shrink product card width */
+      flex-shrink: 0;
+    }
+  
+    .productImage {
+      height: 160px; /* Further shrink product image height */
+    }
+  
+  /* Adjust the star and discount tag for mobile */
+  .productNameRating {
+    font-size: 12px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .productName {
+    font-size: 12px; /* Reduced font size for product name */
+  }
+  
+  
+  .star {
+    font-size: 12px;
+    margin-right: 20px; /* Make star rating smaller */
+  }
+  
+  .discountTag {
+    font-size: 10px; /* Shrink discount text */
+    padding: 2px 3px;
+    margin-left: 5px;
+  }
+  }
+  
+  /* Extra-small mobile view (up to 400px) */
+  @media (max-width: 400px) {
+    /* .container {
+      overflow-x: auto; 
+    } */
+  
+    .productGrid {
+      display: flex;
+      gap: 10px;
+    }
+  
+    .productCard {
+      width: 130px; /* Further shrink product card width */
+      flex-shrink: 0;
+    }
+  
+    .productImage {
+      height: 140px; /* Further shrink product image height */
+    }
+    /* Adjust the star and discount tag for extra-small mobile */
+    .productNameRating {
+      font-size: 10px;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .productName {
+      font-size: 10px; /* Further reduced font size for product name */
+    }
+  
+    .star {
+      font-size: 10px;
+      margin-right: 20px; /* Make star rating very small */
+    }
+  
+    .discountTag {
+      font-size: 8px; /* Shrink discount text */
+      padding: 2px 3px;
+      margin-left: 5px;
+    }
+    
+  }
+  
+  
+  
+  /*backery */
+  
+  .categorySection {
+    margin-left: 160px;
+    margin-right: 160px;
+  }
+  .bakeryhead{
+    margin-left: 50%;
+  }
+  
+  .bakeryGrid {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .bakeryCard {
+    text-align: center;
+    height: 215px; 
+    border-radius: 8px;
+    padding: 3px; 
+    background-color: #ffffff;
+    width: 275px; 
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1); 
+  }
+  
+  .bakeryImage {
+    width: 100%;
+    height: 170px;
+    border-radius: 8px;
+    background-color: #F4F4F4;
+  }
+  
+  .bakeryTitle {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    margin-top: 2px;
+  }
+  
+  /* Tablet view - 3 products per row */
+  @media (max-width: 1024px) {
+    .categorySection {
+      margin-left: 40px;
+      margin-right: 40px;
+    }
+  
+    .bakeryhead {
+      margin-left: 0;
+    }
+  
+    .bakeryGrid {
+      display: flex;
+      gap: 15px;
+      margin-top: 20px;
+      justify-content: center; /* Center the products on smaller screens */
+    }
+  
+    .bakeryCard {
+      width: 30%; /* 3 products per row */
+    }
+    .bakeryImage {
+      width: 100%;
+      height: 150px; /* Shrink image size on tablet */
+    }
+  
+    .bakeryTitle {
+      font-size: 14px; /* Shrink font size of title on tablet */
+    }
+  }
+  
+  /* Tablet view (max-width: 768px) - 2 products per row */
+  @media (max-width: 768px) {
+    .categorySection {
+      margin-left: 5px;
+      margin-right: 20px;
+    }
+  
+    .bakeryhead {
+      margin-left: 50%; /* Adjust header margin on tablet */
+    }
+  
+    .bakeryGrid {
+      display: flex;
+      gap: 15px;
+      margin-top: 20px;
+      justify-content: center; /* Center the products on smaller screens */
+    }
+  
+    .bakeryCard {
+      margin-right: 35px;
+      width: 40%; /* 2 products per row on tablet */
+      height: auto;
+    }
+  
+    .bakeryImage {
+      width: 100%;
+      height: 150px; /* Shrink image size on tablet */
+    }
+  
+    .bakeryTitle {
+      font-size: 14px; /* Shrink font size of title on tablet */
+    }
+  }
+  
+  @media (max-width: 400px) {
+    .categorySection {
+      margin-left: 25px;
+      margin-right: 20px;
+    }
+  
+    .bakeryhead {
+      margin-left: 20px; /* Adjust header margin on tablet */
+    }
+  
+    .bakeryGrid {
+      display: flex;
+      gap: 5px;
+      margin-top: 20px;
+      justify-content: start; /* Center the products on smaller screens */
+    }
+  
+    .bakeryCard {
+      width: 35%; /* 2 products per row on tablet */
+      height: 200px;
+    }
+  
+    .bakeryImage {
+      width: 100%;
+      height: 130px; /* Shrink image size on tablet */
+    }
+  
+    .bakeryTitle {
+      font-size: 14px; /* Shrink font size of title on tablet */
+    }
+  }
+  
+  
+  /* beverage */
+  
+  /* Default - Web view (1024px and above) */
+  .beverageSection {
+    margin-left: 160px;
+    margin-right: 160px;
+    margin-top: 30px;
+  }
+  
+  .beverage {
+    margin-left: 550px;
+  }
+  
+  .beverageGrid {
+    display: flex;
+    gap: 27px;
+    margin-top: 20px;
+    justify-content: center; /* Center the products */
+  }
+  
+  .beverageCard {
+    text-align: center;
+    height: 185px; /* Increased height to accommodate the title with image */
+    border-radius: 8px;
+    padding: 0px; /* Added more padding for better spacing */
+    background-color: #FFFFFF;
+    width: 210px; /* Adjust width based on your preference */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1); /* Added a subtle shadow to separate the cards visually */
+  }
+  
+  .beverageImage {
+    width: 100%;
+    height: 140px;
+    border-radius: 8px;
+    object-fit: contain;
+    background-color: #F4F4F4;
+  }
+  
+  .beverageTitle {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    margin-top: 2px; /* Add spacing between image and title */
+  }
+  
+  
+  /* Tablet view (max-width: 767px) */
+  @media (max-width: 767px) {
+    .beverageSection {
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+  
+    .beverage {
+      margin-left: 50%;
+    }
+  
+    .beverageGrid {
+      display: flex;
+      gap: 15px;
+      margin-top: 20px;
+      justify-content: center; /* Center the products on smaller screens */
+    }
+  
+    .beverageCard {
+      width: 30%; /* 3 products per row on tablet */
+      height: auto; /* Adjust height if needed */
+    }
+  
+    .beverageImage {
+      height: 130px; /* Adjust image height on tablet */
+    }
+  
+    .beverageTitle {
+      font-size: 14px; /* Shrink title font size for tablet */
+    }
+  }
+  
+  
+  /* Mobile view (max-width: 400px) */
+  @media (max-width: 400px) {
+    .beverageSection {
+      margin-left: 25px;
+      margin-right: 5px;
+    }
+  
+    .beverage {
+      margin-left: 30px;
+    }
+  
+    .beverageGrid {
+      display: flex;
+      flex-wrap: wrap; /* Allow wrapping of products */
+      gap: 10px;
+      margin-top: 20px;
+      justify-content: center;
+    }
+  
+    .beverageCard {
+      width: 48%; /* 2 products per row on mobile */
+      height: auto;
+    }
+  
+    .beverageImage {
+      height: 120px; /* Further reduce image height on mobile */
+    }
+  
+    .beverageTitle {
+      font-size: 12px; /* Further shrink title font size on mobile */
+    }
+  }
+  
+  
+  /* fruit */
+  
+  .fruit {
+    margin-top: 30px;
+    margin-left: 160px;
+    margin-right: 160px;
+    
+  }
+  
+  
+  .headerwithfruit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 10px;
+  }
+  
+  .fruittitle {
+    font-size: 24px;
+    margin: 0 20px; /* Add some spacing around the title */
+    
+  }
+  
+  .chevronIconfruit {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 2px solid #333;  */
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    overflow: hidden;
+   
+    padding: 4px;
+  }
+  
+  .chevronIconfriut svg {
+    color: black; /* Adjust color to contrast with the background */
+    font-size: 18px; /* Adjust size as needed */
+  }
+  
+  
+  .chevronLeftfruit {
+    position: absolute;
+    left: -30px; /* Adjust as needed */
+    color: #333;
+    margin-top: 380px;
+   
+  }
+  
+  .chevronRightfruit {
+    position: absolute;
+    right: -6px; /* Adjust as needed */
+    color: #333;
+    margin-top: 380px;
+  }
+  
+  .fruitImage{
+    height:260px;
+   
+  }
+  
+  .fruitGrid {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+    display: flex;
+   
+  }
+  
+  
+  .fruitCard {
+    width: 210px;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative; /* Ensure positioning context for the wishlist icon */
+    padding: 10px 0px;
+    
+  }
+  
+  .fruitDetails {
+    padding: 10px 0px;
+  }
+  
+  .fruitNameRating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px; /* Adds some space between product name/rating and discount tag */
+  }
+  
+  .fruitName {
+    font-size: 16px;
+    white-space: nowrap;
+  }
+  
+  .fruitstar {
+    font-size: 14px;
+    color: #ff9000;
+  }
+  
+  .fruitlitre{
+    border: 2px solid #8F8989;
+    color: #8F8989;
+    padding: 2px 15px;
+    border-radius: 4px;
+    font-size: 10px;
+    white-space: nowrap;
+    
+  }
+  
+  .fruitdiscountTag {
+    background-color: #ff9000;
+    color: white;
+    padding: 2px 5px;
+    border-radius: 4px;
+    font-size: 12px;
+    display: inline-block;
+    margin-left: 105px;
+    white-space: nowrap;
+  }
+  
+  .fruitPriceContainer {
+    margin-top: 5px; /* Adds space between discount tag and price */
+    text-align: left;
+  }
+  
+  .fruitPrice {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+  }
+  
+  .fruitoriginalPrice {
+    text-decoration: line-through;
+    color: #aaa;
+    font-size: 14px;
+    margin-left: 5px;
+  }
+  
+  
+  .fruitwishlistIcon {
+    color: red;
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute; /* Place the icon on the image */
+    top: 10px; /* Adjust top spacing */
+    right: 15px; /* Adjust right spacing */
+    background-color: rgba(255, 255, 255, 0.7); /* Optional: Add a semi-transparent background */
+    padding: 4px; /* Add some padding for the background */
+    border-radius: 50%; /* Make it circular */
+    margin-top: 10px;
+  }
+  /* Tablet view - shrink fruit size and enable horizontal scroll */
+  @media (max-width: 1024px) {
+    .fruit {
+      margin-left: 40px;
+      margin-right: 40px;
+    }
+  
+    .fruitGrid {
+      display: flex;
+      gap: 20px;
+    }
+    .fruittitle {
+      font-size: 24px;
+      margin: 0 20px; /* Add some spacing around the title */
+      
+    }
+    .fruitCard {
+      width: 180px; /* Shrink fruit card width */
+      flex-shrink: 0;
+    }
+  
+    .fruitImage {
+      height: 200px; /* Shrink fruit image height */
+    }
+  
+    /* Adjust the star and discount tag for tablet */
+    .fruitNameRating {
+      font-size: 14px;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .fruitName {
+      font-size: 14px; /* Reduced font size for fruit name */
+    }
+  
+    .fruitstar {
+      font-size: 12px;
+    }
+  
+    .fruitdiscountTag {
+      font-size: 12px; /* Shrink discount text */
+      padding: 2px 4px;
+      margin-left: 5px; /* Adjust spacing between discount and fruit name */
+    }
+    
+  }
+  
+  /* Mobile view - further shrink fruit size and enable horizontal scroll */
+  @media (max-width: 768px) {
+    .fruit {
+      margin-left: 30px;
+      margin-right: 10px;
+    }
+    .fruittitle{
+      margin-left: 20%;
+    }
+    .fruitGrid {
+      display: flex;
+      gap: 15px;
+    }
+  
+    .fruitCard {
+      width: 150px; /* Further shrink fruit card width */
+      flex-shrink: 0;
+    }
+  
+    .fruitImage {
+      height: 160px; /* Further shrink fruit image height */
+    }
+  
+    /* Adjust the star and discount tag for mobile */
+    .fruitNameRating {
+      font-size: 12px;
+      justify-content: space-between;
+      align-items: center;
+      margin-right: 23px;
+    }
+  
+    .fruitName {
+      font-size: 12px; /* Reduced font size for fruit name */
+    }
+  
+    .fruitstar {
+      font-size: 12px;
+    }
+  
+    .fruitdiscountTag {
+      font-size: 10px; /* Shrink discount text */
+      padding: 2px 3px;
+      margin-left: 5px;
+    }
+  }
+  
+  /* Extra-small mobile view (up to 400px) */
+  @media (max-width: 400px) {
+    .fruitGrid {
+      display: flex;
+      gap: 10px;
+    }
+  
+    .fruitCard {
+      width: 130px; /* Further shrink fruit card width */
+      flex-shrink: 0;
+    }
+  
+    .fruitImage {
+      height: 140px; /* Further shrink fruit image height */
+    }
+  
+    /* Adjust the star and discount tag for extra-small mobile */
+    .fruitNameRating {
+      font-size: 10px;
+      justify-content: space-between;
+      align-items: center;
+      margin-right: 20px;
+    }
+  
+    .fruitName {
+      font-size: 10px; /* Further reduced font size for fruit name */
+    }
+  
+    .fruitstar {
+      font-size: 10px;
+    }
+  
+    .fruitdiscountTag {
+      font-size: 8px; /* Shrink discount text */
+      padding: 2px 3px;
+      margin-left: 5px;
+    }
+  }
+  
+  
+  /*second banner*/
+  
+  
+  .secondbanner {
+    margin-top: 50px;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    font-family: Gentium Plus, -apple-system, Roboto, Helvetica, sans-serif;
+    font-weight: 400;
+    padding: 0 0px;
+    margin-left: 160px;
+    margin-right: 160px;
+  }
+  
+  
+  .secondbannerContent {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-height: 430px;
+    width: 100%;
+    align-items: start;
+    padding: 37px 53px 92px;
+    border-radius: 20px; /* Added border-radius */
+    overflow: hidden; /* Ensures background image respects the border-radius */
+  }
+  
+  .secondbackgroundImage {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 20px; /* Added border-radius to match the container */
+  }
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.8); /* White with some transparency */
+    border-radius: 50%; /* Circle border */
+    cursor: pointer;
+  }
+  
+  .arrow-lefttwo {
+    left: 20px;
+    background-color: white;
+    border-radius: 1px solid #8F8989;
+  }
+  
+  .arrow-righttwo {
+    right: 20px;
+    background-color: white;
+    border-radius: 1px solid #8F8989;
+  }
+  
+  .arrow svg {
+    font-size: 12px;
+    color: #333; /* Arrow color */
+  }
+  
+  
+  .specialTitle {
+    position: relative;
+    color: rgba(255, 122, 0, 1);
+    font-size: 32px;
+   
+  }
+  
+  .lowerHeading {
+    position: relative;
+    color: rgba(210, 105, 30, 1);
+    font-size: 40px;
+    font-weight: 700;
+   
+    margin: 60px 0 0 131px;
+  }
+  
+  
+  .secondHeading {
+    position: relative;
+    color: rgba(241, 203, 0, 1);
+    font-size: 36px;
+  
+    margin: 36px 0 0 98px;
+  }
+  
+  
+  
+  .staButton {
+    position: relative;
+    align-self: stretch;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 1);
+    min-height: 48px;
+    color: rgba(20, 154, 98, 1);
+    margin: 49px 0 0 249px;
+    padding: 12px 40px;
+    font: 600 16px Poppins, sans-serif;
+    border: none;
+    cursor: pointer;
+    width: 200px;
+  }
+  /* Desktop View */
+  @media (min-width: 1025px) {
+    .secondbanner {
+      margin-left: 160px;
+      margin-right: 160px;
+      padding: 0 26px;
+    }
+  
+    .secondbannerContent {
+      padding: 37px 53px 92px;
+      min-height: 430px;
+    }
+  
+    .lowerHeading {
+      font-size: 40px;
+      margin: 60px 0 0 131px;
+    }
+  
+    .secondHeading {
+      font-size: 36px;
+      margin: 36px 0 0 98px;
+    }
+  
+    .staButton {
+      margin: 49px 0 0 249px;
+      width: 200px;
+    }
+  }
+  
+  /* Tablet View (768px to 1024px) */
+  @media (max-width: 1024px) and (min-width: 768px) {
+    .secondbanner {
+      margin-left: 80px;
+      margin-right: 80px;
+      padding: 0 16px;
+    }
+  
+    .secondbannerContent {
+      padding: 30px 40px 70px;
+      min-height: 350px;
+    }
+  
+    .lowerHeading {
+      font-size: 32px;
+      margin: 40px 0 0 60px;
+      text-align: left;
+    }
+  
+    .secondHeading {
+      font-size: 28px;
+      margin: 24px 0 0 50px;
+      text-align: left;
+    }
+  
+    .staButton {
+      margin: 40px 0 0 60px;
+      width: 160px;
+    }
+  
+    .secondbackgroundImage {
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+  
+  /* Tablet and Mobile View (767px to 400px) */
+  @media (max-width: 769px) and (min-width: 350px) {
+    .secondbanner {
+      margin-top: 70px;
+      margin-left: 10px;
+      margin-right: 10px;
+      padding: 0 10px;
+    }
+  
+    .secondbannerContent {
+      padding: 15px;
+      min-height: 300px;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+  
+    .secondbackgroundImage {
+      max-width: 100%;
+      height: 200px;
+      object-fit: cover;
+      object-position: center;
+    }
+  
+    /* Arrows - center on the image */
+    .arrow-lefttwo {
+      left: 10px;
+      margin-top: -30px;
+    }
+  
+    .arrow-righttwo {
+      right: 10px;
+      margin-top: -30px;
+    }
+  
+    .specialTitle {
+      font-size: 15px;
+      text-align: center;
+      color: rgba(255, 122, 0, 1);
+      margin-top: 5px;
+    }
+  
+    .lowerHeading {
+      font-size: 18px;
+      margin: 5px 0;
+      text-align: center;
+      font-weight: 700;
+      color: rgba(210, 105, 30, 1);
+    }
+  
+    .secondHeading {
+      font-size: 16px;
+      margin: 5px 0 0;
+      text-align: center;
+      color: rgba(241, 203, 0, 1);
+    }
+  
+    /* CTA Button Adjustments */
+    .staButton {
+      width: 50%;
+      max-width: 150px;
+      margin: 5px 0 0;
+      align-self: center;
+      background-color: rgba(255, 255, 255, 1);
+      color: rgba(20, 154, 98, 1);
+      border: none;
+      font: 600 16px Poppins, sans-serif;
+      cursor: pointer;
+      min-height: 30px;
+    }
+  }
+  
+  /* cooking */
+  
+  
+  .cooking {
+    margin-top: 30px;
+    margin-left: 160px;
+    margin-right: 160px;
+    
+  }
+  
+  .cookingtitle {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .headerwithoil{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 10px;
+  }
+  
+  
+  
+  .chevronIconoil {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 2px solid #333;  */
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    overflow: hidden;
+   
+    padding: 4px;
+  }
+  
+  .chevronIconoil svg {
+    color: black; /* Adjust color to contrast with the background */
+    font-size: 18px; /* Adjust size as needed */
+  }
+  
+  
+  .chevronLeftoil {
+    position: absolute;
+    left: -30px; /* Adjust as needed */
+    color: #333;
+    margin-top: 380px;
+   
+  }
+  
+  .chevronRightoil {
+    position: absolute;
+    right: -6px; /* Adjust as needed */
+    color: #333;
+    margin-top: 380px;
+  }
+  .cookingImage{
+    height:260px;
+   
+  }
+  
+  .cookingGrid {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+    display: flex;
+   
+  }
+  
+  
+  .cookingCard {
+    width: 210px;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative; /* Ensure positioning context for the wishlist icon */
+    padding: 10px 0px;
+    
+  }
+  
+  .cookingDetails {
+    padding: 10px 0px;
+  }
+  
+  .cookingNameRating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px; /* Adds some space between product name/rating and discount tag */
+  }
+  
+  .cookingName {
+    font-size: 16px;
+    white-space: nowrap;
+  }
+  
+  .cookingstar {
+    font-size: 14px;
+    color: #ff9000;
+  }
+  
+  .cookinglitre{
+    border: 2px solid #8F8989;
+    color: #8F8989;
+    padding: 2px 15px;
+    border-radius: 4px;
+    font-size: 10px;
+    white-space: nowrap;
+    
+  }
+  
+  .cookingdiscountTag {
+    background-color: #ff9000;
+    color: white;
+    padding: 2px 5px;
+    border-radius: 4px;
+    font-size: 12px;
+    display: inline-block;
+    margin-left: 105px;
+    white-space: nowrap;
+  }
+  
+  .cookingPriceContainer {
+    margin-top: 5px; /* Adds space between discount tag and price */
+    text-align: left;
+  }
+  
+  .cookingPrice {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+  }
+  
+  .cookingoriginalPrice {
+    text-decoration: line-through;
+    color: #aaa;
+    font-size: 14px;
+    margin-left: 5px;
+  }
+  
+  
+  .cookingwishlistIcon {
+    color: red;
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute; /* Place the icon on the image */
+    top: 10px; /* Adjust top spacing */
+    right: 15px; /* Adjust right spacing */
+    background-color: rgba(255, 255, 255, 0.7); /* Optional: Add a semi-transparent background */
+    padding: 4px; /* Add some padding for the background */
+    border-radius: 50%; /* Make it circular */
+    margin-top: 10px;
+  }
+  
+  /* Tablet view - shrink cooking size and enable horizontal scroll */
+  @media (max-width: 1024px) {
+    .cooking {
+      margin-left: 40px;
+      margin-right: 40px;
+    }
+  
+    .cookingGrid {
+      display: flex;
+      gap: 20px;
+    }
+  
+    .cookingCard {
+      width: 180px;
+      flex-shrink: 0;
+    }
+  
+    .cookingImage {
+      height: 200px;
+    }
+  
+    .cookingNameRating {
+      font-size: 14px;
+      justify-content: space-between;
+      align-items: center;
+      margin-right: 23px;
+    }
+  
+    .cookingName {
+      font-size: 14px;
+    }
+  
+    .cookingstar {
+      font-size: 12px;
+    }
+  
+    .cookingdiscountTag {
+      font-size: 12px;
+      padding: 2px 4px;
+      margin-left: 5px;
+    }
+  }
+  
+  /* Mobile view - further shrink cooking size and enable horizontal scroll */
+  @media (max-width: 768px) {
+    .cooking {
+      margin-left: 30px;
+      margin-right: 10px;
+    }
+  
+    .cookingGrid {
+      display: flex;
+      gap: 15px;
+    }
+  
+    .cookingCard {
+      width: 150px;
+      flex-shrink: 0;
+    }
+  
+    .cookingImage {
+      height: 160px;
+    }
+  
+    .cookingNameRating {
+      font-size: 12px;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .cookingName {
+      font-size: 12px;
+    }
+  
+    .cookingstar {
+      font-size: 12px;
+    }
+  
+    .cookingdiscountTag {
+      font-size: 10px;
+      padding: 2px 3px;
+      margin-left: 5px;
+    }
+  }
+  
+  /* Extra-small mobile view (up to 400px) */
+  @media (max-width: 400px) {
+    .cookingGrid {
+      display: flex;
+      gap: 10px;
+    }
+  
+    .cookingCard {
+      width: 130px;
+      flex-shrink: 0;
+    }
+  
+    .cookingImage {
+      height: 140px;
+    }
+  
+    .cookingNameRating {
+      font-size: 10px;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .cookingName {
+      font-size: 10px;
+    }
+  
+    .cookingstar {
+      font-size: 10px;
+    }
+  
+    .cookingdiscountTag {
+      font-size: 8px;
+      padding: 2px 3px;
+      margin-left: 5px;
+    }
+  }
+  
+  /*footer */
+  
+  .footer {
+    background-color: #2E7D32; /* Green background */
+    color: white;
+    padding: 40px 0;
+    margin-top: 30px;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .footer-logo img {
+    width: 120px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-logo p {
+    max-width: 300px;
+    line-height: 1.6;
+    font-size: 14px;
+  }
+  
+  .footer-social a {
+    color: white;
+    margin-right: 15px;
+    font-size: 20px;
+  }
+  
+  .footer-links, .footer-terms {
+    line-height: 2;
+  }
+  
+  .footer-links ul, .footer-terms ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-links h4, .footer-terms h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-links a, .footer-terms a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .footer-app img {
+    width: 150px;
+    margin-top: 10px;
+  }
+  
